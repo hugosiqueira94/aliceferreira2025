@@ -1,1 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Casamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .gift {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .gift img {
+            width: 100px;
+            height: auto;
+        }
+        .gift-details {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+        .gift-name {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .gift-price {
+            font-size: 16px;
+            color: #666;
+        }
+        .gift button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .gift button:hover {
+            background-color: #218838;
+        }
+        /* Estilo do modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+        }
+        .modal-content img {
+            width: 200px;
+            height: 200px;
+        }
+        .close {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Casamento</h1>
+        
+        <!-- Geladeira -->
+        <div class="gift">
+            <img src="https://via.placeholder.com/100" alt="Geladeira">
+            <div class="gift-details">
+                <div class="gift-name">Geladeira</div>
+                <div class="gift-price">R$ 4000</div>
+            </div>
+            <button onclick="showPix('pixcode-geladeira')">Presentear</button>
+        </div>
+
+        <!-- Máquina Lava e Seca -->
+        <div class="gift">
+            <img src="https://via.placeholder.com/100" alt="Máquina Lava e Seca">
+            <div class="gift-details">
+                <div class="gift-name">Máquina Lava e Seca</div>
+                <div class="gift-price">R$ 3500</div>
+            </div>
+            <button onclick="showPix('pixcode-lavaseca')">Presentear</button>
+        </div>
+
+        <!-- Microondas -->
+        <div class="gift">
+            <img src="https://via.placeholder.com/100" alt="Microondas">
+            <div class="gift-details">
+                <div class="gift-name">Microondas</div>
+                <div class="gift-price">R$ 500</div>
+            </div>
+            <button onclick="showPix('pixcode-microondas')">Presentear</button>
+        </div>
+
+        <!-- Airfryer -->
+        <div class="gift">
+            <img src="https://via.placeholder.com/100" alt="Airfryer">
+            <div class="gift-details">
+                <div class="gift-name">Airfryer</div>
+                <div class="gift-price">R$ 400</div>
+            </div>
+            <button onclick="showPix('pixcode-airfryer')">Presentear</button>
+        </div>
+
+        <!-- Liquidificador -->
+        <div class="gift">
+            <img src="https://via.placeholder.com/100" alt="Liquidificador">
+            <div class="gift-details">
+                <div class="gift-name">Liquidificador</div>
+                <div class="gift-price">R$ 350</div>
+            </div>
+            <button onclick="showPix('pixcode-liquidificador')">Presentear</button>
+        </div>
+
+        <!-- Jogo de Panelas -->
+        <div class="gift">
+            <img src="https://via.placeholder.com/100" alt="Jogo de Panelas">
+            <div class="gift-details">
+                <div class="gift-name">Jogo de Panelas</div>
+                <div class="gift-price">R$ 700</div>
+            </div>
+            <button onclick="showPix('pixcode-panelas')">Presentear</button>
+        </div>
+
+        <!-- Jogo de Pratos -->
+        <div class="gift">
+            <img src="https://via.placeholder.com/100" alt="Jogo de Pratos">
+            <div class="gift-details">
+                <div class="gift-name">Jogo de Pratos</div>
+                <div class="gift-price">R$ 300</div>
+            </div>
+            <button onclick="showPix('pixcode-pratos')">Presentear</button>
+        </div>
+
+        <!-- Modal para exibir o Pix -->
+        <div id="pixModal" class="modal">
+            <div class="modal-content">
+                <h2>Contribua com este presente!</h2>
+                <div id="pix-content"></div>
+                <br>
+                <button class="close" onclick="closePix()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Código Pix para cada item
+        const pixCodes = {
+            'pixcode-geladeira': '00020126360014BR.GOV.BCB.PIX0114+55119999999952204000053039865404240.00630414B24D',
+            'pixcode-lavaseca': '00020126360014BR.GOV.BCB.PIX0114+55119999999952204000053039865404350.00630415B24D',
+            'pixcode-microondas': '00020126360014BR.GOV.BCB.PIX0114+55119999999952204000053039865404500.00630416B24D',
+            'pixcode-airfryer': '00020126360014BR.GOV.BCB.PIX0114+55119999999952204000053039865404400.00630417B24D',
+            'pixcode-liquidificador': '00020126360014BR.GOV.BCB.PIX0114+55119999999952204000053039865404350.00630418B24D',
+            'pixcode-panelas': '00020126360014BR.GOV.BCB.PIX0114+55119999999952204000053039865404700.00630419B24D',
+            'pixcode-pratos': '00020126360014BR.GOV.BCB.PIX0114+55119999999952204000053039865404300.00630420B24D'
+        };
+
+        // Função para exibir o Pix
+        function showPix(pixKey) {
+            const modal = document.getElementById('pixModal');
+            const pixContent = document.getElementById('pix-content');
+
+            const pixCode = pixCodes[pixKey];
+
+            // Conteúdo do modal com QR Code e código Pix
+            pixContent.innerHTML = `
+                <p>Código Pix (copiar e colar):</p>
+                <p><strong>${pixCode}</strong></p>
+                <img src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=${encodeURIComponent(pixCode)}" alt="QR Code Pix">
+            `;
+
+            modal.style.display = 'flex';
+        }
+
+        // Fechar o modal
+        function closePix() {
+            document.getElementById('pixModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
 
