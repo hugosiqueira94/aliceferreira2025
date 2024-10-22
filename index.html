@@ -94,17 +94,27 @@
 <body>
     <div class="container">
         <h1>Lista de Casamento</h1>
-        
-        <!-- Geladeira -->
+                       
+        <!-- Potes Herméticos -->
         <div class="gift">
-            <img src="geladeira.jpeg" alt="Geladeira">
+            <img src="potes hermeticos.jpeg" alt="Potes Herméticos">
             <div class="gift-details">
-                <div class="gift-name">Geladeira</div>
-                <div class="gift-price">R$ 3000</div>
+                <div class="gift-name">Potes Herméticos</div>
+                <div class="gift-price">R$ 100</div>
             </div>
-            <button onclick="showPix('pixcode-geladeira')">Presentear</button>
+            <button onclick="showPix('pixcode-potes')">Presentear</button>
         </div>
-
+                       
+        <!-- Pipoqueira -->
+        <div class="gift">
+            <img src="lava e seca.jpeg" alt="Pipoqueira">
+            <div class="gift-details">
+                <div class="gift-name">Pipoqueira</div>
+                <div class="gift-price">R$ 50</div>
+            </div>
+            <button onclick="showPix('pixcode-pipoqueira')">Presentear</button>
+        </div>
+                       
         <!-- Máquina Lava e Seca -->
         <div class="gift">
             <img src="lava e seca.jpeg" alt="Máquina Lava e Seca">
@@ -114,7 +124,7 @@
             </div>
             <button onclick="showPix('pixcode-lavaseca')">Presentear</button>
         </div>
-
+        
         <!-- Microondas -->
         <div class="gift">
             <img src="microondas.jpeg" alt="Microondas">
@@ -165,6 +175,36 @@
             <button onclick="showPix('pixcode-pratos')">Presentear</button>
         </div>
 
+        <!-- Fogão -->
+        <div class="gift">
+            <img src="fogao.jpeg" alt="Fogão">
+            <div class="gift-details">
+                <div class="gift-name">Fogão</div>
+                <div class="gift-price">R$ 1400</div>
+            </div>
+            <button onclick="showPix('pixcode-fogao')">Presentear</button>
+        </div>
+        
+                <!-- Geladeira -->
+        <div class="gift">
+            <img src="geladeira.jpeg" alt="Geladeira">
+            <div class="gift-details">
+                <div class="gift-name">Geladeira</div>
+                <div class="gift-price">R$ 3000</div>
+            </div>
+            <button onclick="showPix('pixcode-geladeira')">Presentear</button>
+        </div>
+
+                <!-- Máquina Lava e Seca -->
+        <div class="gift">
+            <img src="lava e seca.jpeg" alt="Máquina Lava e Seca">
+            <div class="gift-details">
+                <div class="gift-name">Máquina Lava e Seca</div>
+                <div class="gift-price">R$ 3500</div>
+            </div>
+            <button onclick="showPix('pixcode-lavaseca')">Presentear</button>
+        </div>
+
         <!-- Modal para exibir o Pix -->
         <div id="pixModal" class="modal">
             <div class="modal-content">
@@ -185,7 +225,10 @@
             'pixcode-airfryer': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6',
             'pixcode-liquidificador': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6',
             'pixcode-panelas': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6',
-            'pixcode-pratos': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6'
+            'pixcode-pratos': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6',
+            'pixcode-potes': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6',
+            'pixcode-pipoqueira': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6',
+            'pixcode-fogao': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6'
         };
 
         // Função para exibir o Pix
