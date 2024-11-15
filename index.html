@@ -130,22 +130,14 @@ Alice e Hugo</h3>
             <button onclick="showPix('pixcode-arvore')">Presentear</button>
         </div>
         
-        <!-- TV -->
-        <div class="gift">
-            <img src="tv.jpeg" alt="TV">
-            <div class="gift-details">
-                <div class="gift-name">TV</div>
-                <div class="gift-price">R$ 2000</div>
-            </div>
-            <button onclick="showPix('pixcode-tv')">Presentear</button>
-        </div>
+       
         
         <!-- Microondas -->
         <div class="gift">
             <img src="microondas.jpeg" alt="Microondas">
             <div class="gift-details">
                 <div class="gift-name">Microondas</div>
-                <div class="gift-price">R$ 400</div>
+                <div class="gift-price">R$ 500</div>
             </div>
             <button onclick="showPix('pixcode-microondas')">Presentear</button>
         </div>
@@ -155,7 +147,7 @@ Alice e Hugo</h3>
             <img src="airfryer.jpeg" alt="Airfryer">
             <div class="gift-details">
                 <div class="gift-name">Airfryer</div>
-                <div class="gift-price">R$ 250</div>
+                <div class="gift-price">R$ 300</div>
             </div>
             <button onclick="showPix('pixcode-airfryer')">Presentear</button>
         </div>
@@ -199,26 +191,6 @@ Alice e Hugo</h3>
             </div>
             <button onclick="showPix('pixcode-fogao')">Presentear</button>
         </div>
-        
-                <!-- Geladeira -->
-        <div class="gift">
-            <img src="geladeira.jpeg" alt="Geladeira">
-            <div class="gift-details">
-                <div class="gift-name">Geladeira</div>
-                <div class="gift-price">R$ 3000</div>
-            </div>
-            <button onclick="showPix('pixcode-geladeira')">Presentear</button>
-        </div>
-
-                <!-- Máquina Lava e Seca -->
-        <div class="gift">
-            <img src="lava e seca.jpeg" alt="Máquina Lava e Seca">
-            <div class="gift-details">
-                <div class="gift-name">Máquina Lava e Seca</div>
-                <div class="gift-price">R$ 3500</div>
-            </div>
-            <button onclick="showPix('pixcode-lavaseca')">Presentear</button>
-        </div>
 
         <!-- Modal para exibir o Pix -->
         <div id="pixModal" class="modal">
@@ -234,8 +206,6 @@ Alice e Hugo</h3>
     <script>
         // Código Pix para cada item
         const pixCodes = {
-            'pixcode-geladeira': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6',
-            'pixcode-lavaseca': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6',
             'pixcode-microondas': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6',
             'pixcode-airfryer': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6',
             'pixcode-liquidificador': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6',
@@ -245,8 +215,7 @@ Alice e Hugo</h3>
             'pixcode-pipoqueira': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6',
             'pixcode-fogao': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6',
             'pixcode-arvorenatal': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6',
-            'pixcode-tv': '00020126590014BR.GOV.BCB.PIX0114+55219921187920219Lista de casamento 5204000053039865802BR5925HUGO LEONARDO SIQUEIRA SI6008CAMPINAS622605224MsaENnqkBsbauciKCseVN6304BAA6'
-        };
+            };
 
         // Função para exibir o Pix
         function showPix(pixKey) {
